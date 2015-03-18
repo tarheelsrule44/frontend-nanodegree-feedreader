@@ -41,7 +41,7 @@ $(function() {
          */        
         it("should be hidden", function(){            
             expect($('body').hasClass('menu-hidden')).toBeTruthy();
-        })
+        });
          /* Test that ensures the menu changes
           * visibility when the menu icon is clicked.
           * This test has two functions: 
@@ -86,7 +86,7 @@ $(function() {
         });
         //After the loadFeed function runs, .feed has different entries
         it('should have new content', function(done) {
-            expect($('.feed a').children).not.toBe(entries);
+            expect($('.feed a').children('.entry')).not.toBe(entries);
             done();
         });        
         afterAll(function (done) {
